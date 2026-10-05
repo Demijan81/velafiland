@@ -4,14 +4,15 @@
   // ---------- Reference ----------
   var CATS = [
     ['sve', 'Sve'],
-    ['kotlarnice', 'Kotlarnice'],
-    ['podstanice', 'Toplotne podstanice'],
-    ['gasovodi', 'Gasovodi'],
     ['toplovodi', 'Toplovodi'],
-    ['ostalo', 'Klimatizacija, solar i ostalo'],
+    ['podstanice', 'Toplotne podstanice'],
+    ['kotlarnice', 'Kotlarnice'],
+    ['diktir', 'Diktir sistemi'],
+    ['gasovodi', 'Gasovodi'],
+    ['klima', 'Klimatizacija'],
+    ['solar', 'Solarne instalacije'],
     ['servis', 'Održavanje i servis'],
-    ['prodaja', 'Zastupstvo i prodaja'],
-    ['arhiva', 'Arhiva 2014–2015']
+    ['prodaja', 'Zastupstva i prodaja']
   ];
 
   // [kategorija, opis, naručilac / lokacija, godina]
@@ -26,7 +27,7 @@
 
     ['podstanice', 'Zamena pumpi u podstanicama', 'Rudarski institut, Beograd', '2025'],
     ['podstanice', 'Toplotne podstanice 8 MW', 'HERC Feniks — Beogradske elektrane', '2021/26'],
-    ['podstanice', 'Diktir sistemi', 'HERC Feniks — Beogradske elektrane', '2021/26'],
+    ['diktir', 'Diktir sistemi', 'HERC Feniks — Beogradske elektrane', '2021/26'],
     ['podstanice', 'Toplotne podstanice, 5 kom', 'Toplana Subotica', '2023'],
     ['podstanice', 'Toplotne podstanice', 'Toplana Majdanpek', '2023'],
     ['podstanice', 'Toplotne podstanice 16 MW', 'JAT Tehnika', '2022/23'],
@@ -44,22 +45,22 @@
     ['toplovodi', 'Toplovod', 'Coca-Cola, Neresnica', '2021'],
     ['toplovodi', 'Toplovod', 'SRC Tašmajdan, Beograd', '2020'],
 
-    ['ostalo', 'Sistemi klimatizacije i ventilacije proizvodne linije i kompresorske stanice', 'Coca-Cola, Neresnica', '2024'],
+    ['klima', 'Sistemi klimatizacije i ventilacije proizvodne linije i kompresorske stanice', 'Coca-Cola, Neresnica', '2024'],
     ['ostalo', 'Zamena i ugradnja frekventnih pumpi, 26 kom', 'Beogradske elektrane', '2023'],
-    ['ostalo', 'Kanalski grejači vazduha', 'JAT Tehnika', '2023'],
-    ['ostalo', 'Hidrantska mreža gasne kotlarnice', 'Coca-Cola, Neresnica', '2022'],
-    ['ostalo', 'Degazator — parna kotlarnica', 'Coca-Cola', '2021'],
+    ['klima', 'Kanalski grejači vazduha', 'JAT Tehnika', '2023'],
+    ['kotlarnice', 'Hidrantska mreža gasne kotlarnice', 'Coca-Cola, Neresnica', '2022'],
+    ['kotlarnice', 'Degazator — parna kotlarnica', 'Coca-Cola', '2021'],
     ['ostalo', 'Gromobranska instalacija', 'Rudarski institut, Beograd', '2021'],
-    ['ostalo', 'Solarni kolektori, 2 sistema', 'Kvantaška pijaca, Beograd', '2020'],
-    ['ostalo', 'Ventilacija', 'SRC Tašmajdan, Beograd', '2020'],
-    ['ostalo', 'Rekonstrukcija čilerske stanice', 'Coca-Cola, Beograd', '2019'],
-    ['ostalo', 'Automatika CSNU — kotlarnica', 'Coca-Cola', '2019'],
-    ['ostalo', 'Kaloriferska instalacija', 'Karteks, Šimanovci', '2019'],
-    ['ostalo', 'Čelična konstrukcija — kotlarnica Resnik', 'Beogradske elektrane', '2019'],
-    ['ostalo', 'Sanacija krova kotlarnice', 'IM „Topola“, Bačka Topola', '2019'],
-    ['ostalo', 'Solarni kolektori', 'Delta Inženjering — Opšta bolnica Sremska Mitrovica', '2016'],
-    ['ostalo', 'Solarni kolektori', 'Delta Inženjering — Gerontološki centar Ruma', '2016'],
-    ['ostalo', 'Instalacije ventilacije', 'SRC Tašmajdan', '2016'],
+    ['solar', 'Solarni kolektori, 2 sistema', 'Kvantaška pijaca, Beograd', '2020'],
+    ['klima', 'Ventilacija', 'SRC Tašmajdan, Beograd', '2020'],
+    ['klima', 'Rekonstrukcija čilerske stanice', 'Coca-Cola, Beograd', '2019'],
+    ['kotlarnice', 'Automatika CSNU — kotlarnica', 'Coca-Cola', '2019'],
+    ['klima', 'Kaloriferska instalacija', 'Karteks, Šimanovci', '2019'],
+    ['kotlarnice', 'Čelična konstrukcija — kotlarnica Resnik', 'Beogradske elektrane', '2019'],
+    ['kotlarnice', 'Sanacija krova kotlarnice', 'IM „Topola“, Bačka Topola', '2019'],
+    ['solar', 'Solarni kolektori', 'Delta Inženjering — Opšta bolnica Sremska Mitrovica', '2016'],
+    ['solar', 'Solarni kolektori', 'Delta Inženjering — Gerontološki centar Ruma', '2016'],
+    ['klima', 'Instalacije ventilacije', 'SRC Tašmajdan', '2016'],
 
     ['servis', 'Servis gorionika', 'SRC Tašmajdan — Hala „Aleksandar Nikolić“', '2016–2026'],
     ['servis', 'Servis gorionika', 'Rudarski institut', '2018–2026'],
@@ -73,21 +74,6 @@
     ['prodaja', 'Gorionici OILON, snage 500 – 7.500 kW', 'Finska', '2019–2026'],
     ['prodaja', 'INOX dimnjaci JEREMIAS, d = 200 – 900 mm', 'Nemačka', '2014–2026'],
 
-    ['arhiva', 'OILON 7 MW — gasni gorionik', 'JKP „Grejanje“, Pančevo', '2015'],
-    ['arhiva', 'OILON 4,5 MW — mazutni gorionik', 'SRC Tašmajdan, hala „Pionir“', '2015'],
-    ['arhiva', 'GIERSCH 1,5 MW — gasni gorionik', 'Topling Grejanje — Bitolj', '2015'],
-    ['arhiva', 'GIERSCH 1 MW — gasni gorionik', 'Topling Grejanje — Kosovska Mitrovica', '2015'],
-    ['arhiva', 'Dimnjak JEREMIAS D = 500 mm, L = 12 m', 'Termah Beograd — JUB, Šimanovci', '2015'],
-    ['arhiva', 'Dimnjak JEREMIAS D = 200 mm, L = 12 m', 'Termah Beograd — JUB, Šimanovci', '2015'],
-    ['arhiva', 'Dimnjaci JEREMIAS D = 200 i 250 mm, L = 7 m', 'Viessmann Beograd — Swisslion', '2015'],
-    ['arhiva', 'Dimnjak JEREMIAS D = 250 mm, L = 12 m', 'Malcoming, S. Mitrovica — Škola Morović', '2014'],
-    ['arhiva', 'Dovodni gasovod PE 225, L = 480 m', 'JUB, Šimanovci', '2015'],
-    ['arhiva', 'Unutrašnja gasna instalacija — parna kotlarnica 5 MW', 'JUB, Šimanovci', '2015'],
-    ['arhiva', 'Ventilacija', 'JUB, Šimanovci', '2015'],
-    ['arhiva', 'TNG instalacija — isparivačka stanica Q = 100 kg/h, rezervoar V = 20 m³', 'Topling Grejanje — Kosovska Mitrovica', '2015'],
-    ['arhiva', 'Sistem upravljanja grejanjem i klimatizacijom', 'SRC Tašmajdan, Beograd', '2015'],
-    ['arhiva', 'Ulja i maziva FUCHS', 'Gas Teh, Inđija', '2014, 2015'],
-    ['arhiva', 'CSNU nadogradnja — projektovanje', 'Hotel Mona, Zlatibor', '2014']
   ];
 
   var chips = document.getElementById('refChips');
@@ -95,6 +81,7 @@
   var count = document.getElementById('refCount');
   var catName = {};
   CATS.forEach(function (c) { catName[c[0]] = c[1]; });
+  catName.ostalo = 'Ostalo';
 
   function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 
@@ -122,7 +109,7 @@
       b.addEventListener('click', function () { render(c[0]); });
       chips.appendChild(b);
     });
-    render('kotlarnice');
+    render('sve');
   }
 
   // ---------- Navigacija ----------
