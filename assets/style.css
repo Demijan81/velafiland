@@ -336,3 +336,14 @@ a.doc:hover { transform: translateY(-2px); border-color: #c9d9ec; box-shadow: va
   .id-sheet { box-shadow: none; border-radius: 0; }
   .id-table > div { padding: 9px 12px; }
 }
+
+/* ---------- Potvrda (ovlašćeni ponuđač) ---------- */
+.cert { padding: clamp(24px, 5vw, 48px); color: var(--text); }
+.cert p { margin-bottom: 18px; line-height: 1.75; }
+.cert-head { margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px solid var(--line); color: var(--ink); }
+.cert-head p { margin: 0; }
+.cert-title { text-align: center; font-size: 1.5rem; letter-spacing: .1em; margin: 34px 0 20px; }
+.cert-center { text-align: center; }
+.cert-subject { text-align: center; padding: 22px; margin: 6px 0 28px !important; border-radius: 14px; background: var(--tint); border: 1px solid var(--line); }
+.cert-subject strong { display: block; font-size: 1.25rem; color: var(--ink); }
+.cert-subject span { font-size: .95rem; color: var(--muted); }
